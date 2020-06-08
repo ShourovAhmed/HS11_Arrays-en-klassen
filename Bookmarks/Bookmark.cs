@@ -5,18 +5,16 @@ using System.Diagnostics;
 
 namespace Bookmarks
 {
-    class Bookmark
+
+    class BookMark
     {
-        class BookMark
+
+        public string Naam { get; set; }
+        public string URL { get; set; }
+        public void OpenSite()
         {
+            Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", URL);  //Voeg bovenaan using System.Diagnostics; toe
 
-            public string Naam { get; set; }
-            public string URL { get; set; }
-            public void OpenSite()
-            {
-                Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", URL);  //Voeg bovenaan using System.Diagnostics; toe
-
-            }
         }
     }
 }
